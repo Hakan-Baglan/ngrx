@@ -1,0 +1,24 @@
+<!-- 
+<div class="container">
+  <div class="row">
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" *ngFor="let item of baskets ">{{item.product.name}} - {{item.quantitiy}}</a></li>
+    </ul>
+</div>
+</div> -->
+<div class="container">
+  <button class="btn btn-primary w-100" routerLink="/product-add">Product Add</button>
+    <div class="row">
+        <div class="col-md-3 mt-4" *ngFor="let product of products">
+            <div class="card" style="width: 18rem;">
+                <img src="https://c0.wallpaperflare.com/preview/331/772/55/apparel-clothing-shoe-footwear.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.name}}</h5>
+                  <p class="card-text">Stock: {{product.stock}}</p>
+                  <p class="card-text">Price: {{product.unitPrice}}</p>
+                  <a class="btn btn-primary" (click)="addBasket(product)">Add Basket</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
